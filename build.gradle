@@ -17,6 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-amqp'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework:spring-webmvc:5.1.6.RELEASE'
 	implementation 'com.google.code.gson:gson:2.7'
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

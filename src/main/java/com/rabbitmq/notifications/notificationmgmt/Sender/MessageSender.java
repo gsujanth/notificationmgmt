@@ -30,7 +30,7 @@ public class MessageSender {
     public void sendMailNotification(Message message){
         try {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
-            mailMessage.setTo("dyyufgi@gmail.com");
+            mailMessage.setTo("dhwdhwidiw@gmail.com");
             mailMessage.setFrom(env.getProperty("spring.mail.username"));
             mailMessage.setSubject("Test");
             mailMessage.setText("Hi Bro");

@@ -11,8 +11,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+//import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@Controller
+//@RestController
 public class NotificationmgmtApplication {
 
     @Autowired
@@ -49,9 +55,17 @@ public class NotificationmgmtApplication {
         return new MessageListenerAdapter(receiver, "receiveMessage");
     }
 
-    @Bean
-    void hi(){
+    //@Bean
+    @GetMapping("/sendMessage")
+    @ResponseBody
+    public String sendMessage(){
         messageSender.sendMessage();
+        return "Message sent";
+    }
+
+    @GetMapping("/send")
+    public String send(){
+        return "send.html";
     }
 
     public static void main(String[] args) {

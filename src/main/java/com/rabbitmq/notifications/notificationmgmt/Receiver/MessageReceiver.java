@@ -18,7 +18,6 @@ public class MessageReceiver {
         final Gson gson = new Gson();
         final Message message = gson.fromJson(new String(receivedMessage), Message.class);
         System.out.println("JSON Received <" + message + ">");
-        //messageSender.sendMessage();
         messageSender.sendMailNotification(message);
     }
 }
